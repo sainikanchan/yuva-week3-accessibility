@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AccessPoint accessible information portal demo for Yuva Intern Week 3.">
+  <title>AccessPoint — Accessible Information Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Keyboard users can bypass repeated navigation. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="AccessPoint home">ACCESS<span>POINT</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+        aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">INCLUSIVE INFORMATION</p>
+          <h1 id="hero-title">Information should be easy for <span>everyone</span> to access.</h1>
+          <p class="hero-copy">
+            Practical articles and ideas presented through a clear, accessible interface designed for a wide range of users.
+          </p>
+
+          <form class="search-form" id="searchForm" role="search">
+            <label for="searchInput">Search articles</label>
+            <div class="search-row">
+              <input id="searchInput" name="search" type="search" placeholder="Try “keyboard navigation”" autocomplete="off">
+              <button class="button primary" type="submit">Search</button>
+            </div>
+            <p id="searchStatus" class="status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="hero-note" aria-label="Accessibility principle">
+          <div class="note-icon" aria-hidden="true">✓</div>
+          <h2>Designed for real people</h2>
+          <p>Keyboard support, visible focus, readable contrast and responsive layouts are built into the experience.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="articles section" id="articles" aria-labelledby="articles-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">LATEST ARTICLES</p>
+          <h2 id="articles-title">Learn something useful.</h2>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <p class="category">Accessibility</p>
+            <h3><a href="#accessibility">A practical guide to keyboard-friendly interfaces</a></h3>
+            <p>Understand focus order, visible focus indicators and why native controls matter.</p>
+            <a class="read-link" href="#accessibility">Read article <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="article-card">
+            <p class="category">UX Design</p>
+            <h3><a href="#accessibility">Designing clearer experiences with less friction</a></h3>
+            <p>Simple structure, predictable interactions and readable content can help everyone.</p>
+            <a class="read-link" href="#accessibility">Read article <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="article-card">
+            <p class="category">Web Standards</p>
+            <h3><a href="#accessibility">When semantic HTML is better than extra ARIA</a></h3>
+            <p>Learn how meaningful HTML elements can provide accessibility with less complexity.</p>
+            <a class="read-link" href="#accessibility">Read article <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="accessibility section" id="accessibility" aria-labelledby="access-title">
+      <div class="container accessibility-grid">
+        <div>
+          <p class="eyebrow">ACCESSIBILITY FIRST</p>
+          <h2 id="access-title">Small improvements create a better experience.</h2>
+        </div>
+        <div class="check-list">
+          <p><span aria-hidden="true">✓</span><strong>Keyboard friendly</strong> — all key actions are reachable without a mouse.</p>
+          <p><span aria-hidden="true">✓</span><strong>Visible focus</strong> — keyboard focus is never hidden.</p>
+          <p><span aria-hidden="true">✓</span><strong>Clear structure</strong> — landmarks and headings help users understand the page.</p>
+          <p><span aria-hidden="true">✓</span><strong>Responsive</strong> — content remains usable on small screens.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">HAVE A QUESTION?</p>
+          <h2 id="contact-title">Keep the conversation accessible.</h2>
+        </div>
+        <a class="button light" href="mailto:hello@example.com">Contact us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 AccessPoint · Yuva Intern Week 3</p>
+      <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
